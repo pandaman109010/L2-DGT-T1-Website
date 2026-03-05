@@ -16,6 +16,7 @@
     </head>
 
     <body>
+        <img src="images/2person_club.webp" alt="Two jugglers practicing with clubs" class="page-background">
         <div class="nav">
             <h1 class="nav-title">
                 <a href="index.html" class="nav-title" style="text-decoration: underline;">
@@ -23,7 +24,7 @@
                 </a>
             </h1>
             <a href="index.html" class="small-home" style="text-decoration: underline;">
-                🏠︎
+                <img src="images/house_ico.webp" alt="Home" class="small-home-icon">
             </a>
             <a href="Gear_Review.html" class="gear">
                 Gear Review
@@ -42,14 +43,14 @@
         </div>
 
         </div>
-        <div class="body">
-            <h1 class="body-header">Welcome to The Training Ground</h1>
-            <p class="opener">for 3 years i've devoted myself to learning and improving my juggling skills. and i would like to share my knowledge and experience with others. through this website, i hope to help others develop their juggling abilities with this website and enjoy the fun and challenge that juggling brings.</p>
-        </div>
+            <div class="body">
+                <h1 class="body-header">Welcome to The Training Ground</h1>
+                <p class="opener">for 3 years i've devoted myself to learning and improving my juggling skills. and i would like to share my knowledge and experience with others. through this website, i hope to help others develop their juggling abilities with this website and enjoy the fun and challenge that juggling brings.</p>
+            </div>
         
         <div class="footer">
-            <p>© 2025 Jaden Meharry</p>
-            <p>Master Your Flow. Share Your Art.</p>
+            <p>© 2026 Jaden Meharry</p>
+            <button id="join-button">Join The Community</button>
             <p class="footer-links">
             <a href="Gear_Review.html" class="gear">
                 Gear Review
@@ -59,6 +60,30 @@
             </a>
             </p>
         </div>
+
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-analytics.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            const firebaseConfig = {
+                apiKey: "AIzaSyCFDFGYr003Ocix4ArJtO1HygJ8_JgVM3w",
+                authDomain: "club-juggling.firebaseapp.com",
+                projectId: "club-juggling",
+                storageBucket: "club-juggling.firebasestorage.app",
+                messagingSenderId: "605495578030",
+                appId: "1:605495578030:web:2c2ed9afd3dbd99e430c3f",
+                measurementId: "G-7NL84YEJXM"
+            };
+
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+        </script>
     </body>
 
 </html>
