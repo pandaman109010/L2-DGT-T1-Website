@@ -3,46 +3,92 @@
 <html lang="en">
 
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--sets the name and other information that the browser needs to know-->
         <title>Juggler’s Toolkit</title>
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
         <link rel="icon" type="image/x-icon" href="images/logo.png">
+
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6152889256973413"
+            crossorigin="anonymous"></script> <!--google adsense script-->
+
     </head>
 
     <body>
-        <img src="images/2person_club.webp" alt="Two jugglers practicing with clubs" class="page-background">
-        <div class="nav">
-            <h1 class="nav-title">
+        <img src="images/2person_club.webp" alt="Two jugglers practicing with clubs" class="page-background"> <!--background image of the page-->
+        
+        <div class="nav"> <!--defines navigation bar at the top of the page-->
+
+            <h1 class="nav-title"> <!--all the diffrent buttons in th nav menu-->
                 <a href="index.html" class="nav-title">
                     The Training Ground
                 </a>
             </h1>
-            <a href="index.html" class="small-home">
+
+            <a href="index.html" class="small-home" style="text-decoration: underline;">
                 <img src="images/house_ico.webp" alt="Home" class="small-home-icon">
             </a>
+
             <a href="Gear_Review.html" class="gear">
                 Gear Review
             </a>
-            <a href="The_Practice_Den.html" class="practice" style="text-decoration: underline;">
+
+            <a href="The_Practice_Den.html" class="practice">
                 The Practice Den
             </a>
+
         </div>
 
-        <!-- Container element -->
-        <div class="parallax"></div>
 
+        <div class="parallax">
+            <div class="body"> <!--main body of the page-->
+                <h1 class="body-header">Welcome to the juggler's Toolkit.</h1>
+                <p class="opener">If you just got your clubs The Training Ground is here to help you improve. We have reviews of the gear to help you find the right type for your tricks. You can also check out our easy-to-follow tutorials to turn your practice into a show. The Training Ground is about helping you master club juggleing with precise techniques and tips from me the owner of this website. We want to help you take your skills to the level whether you are a beginner or advanced. Explore our site to learn more about club juggleing and how to improve your skills.</p>
+            </div>
+        </div>
+        
+            <div class="body"> <!--second body of the page-->
+                <h1 class="body-header">Welcome to The Training Ground</h1>
+                <p class="opener">for 3 years i've devoted myself to learning and improving my juggling skills. and i would like to share my knowledge and experience with others. through this website, i hope to help others develop their juggling abilities with this website and enjoy the fun and challenge that juggling brings.</p>
+            </div>
+        
+        <div class="footer"> <!--footer of the page-->
+            <p>© 2026 Jaden Meharry</p>
+            <button id="join-button">Join The Community</button>
+            <p class="footer-links">
+            <a href="Gear_Review.html" class="gear">
+                Gear Review
+            </a>
+            <a href="The_Practice_Den.html" class="practice">
+                The Practice Den
+            </a>
+            </p>
+        </div>
 
-		<div class="body">
-			<div class="caption">
-			<span class="border"> 
-			scroll down
-			</span>
-			</div>
-			<h1>
-			test
-			</h1>
-		</div>
+        <!--firebase script-->
+        <script type="module"> 
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-analytics.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            const firebaseConfig = {
+                apiKey: "AIzaSyCFDFGYr003Ocix4ArJtO1HygJ8_JgVM3w",
+                authDomain: "club-juggling.firebaseapp.com",
+                projectId: "club-juggling",
+                storageBucket: "club-juggling.firebasestorage.app",
+                messagingSenderId: "605495578030",
+                appId: "1:605495578030:web:2c2ed9afd3dbd99e430c3f",
+                measurementId: "G-7NL84YEJXM"
+            };
+
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+        </script>
     </body>
 
 </html>

@@ -3,46 +3,117 @@
 <html lang="en">
 
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--sets the name and other information that the browser needs to know-->
         <title>Juggler’s Toolkit</title>
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
         <link rel="icon" type="image/x-icon" href="images/logo.png">
+
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6152889256973413"
+            crossorigin="anonymous"></script> <!--google adsense script-->
+
     </head>
 
     <body>
-        <img src="images/2person_club.webp" alt="Two jugglers practicing with clubs" class="page-background">
-        <div class="nav">
-            <h1 class="nav-title">
+        <img src="images/2person_club.webp" alt="Two jugglers practicing with clubs" class="page-background"> <!--background image of the page-->
+        
+        <div class="nav"> <!--defines navigation bar at the top of the page-->
+
+            <h1 class="nav-title"> <!--all the diffrent buttons in th nav menu-->
                 <a href="index.html" class="nav-title">
                     The Training Ground
                 </a>
             </h1>
-            <a href="index.html" class="small-home">
+
+            <a href="index.html" class="small-home" style="text-decoration: underline;">
                 <img src="images/house_ico.webp" alt="Home" class="small-home-icon">
             </a>
-            <a href="Gear_Review.html" class="gear" style="text-decoration: underline;">
+
+            <a href="Gear_Review.html" class="gear">
+                Gear Review
+            </a>
+
+            <a href="The_Practice_Den.html" class="practice">
+                The Practice Den
+            </a>
+
+        </div>
+
+
+        <div class="parallax">
+            <div class="body"> <!--main body of the page-->
+                <h1 class="body-header">Choose Your Gear</h1>
+                <p class="opener">Selecting the right equipment is the foundation of every great juggler. Learn the difference between weighted clubs and trainers.</p>
+            </div>
+        </div>
+        
+            <div class="body">
+                <H1 class="body-header">Section 1: Choosing Your Club Size</H1>
+                <p class="opener">Selecting the correct club size is the most critical decision for any juggler. A club that is too large can feel cumbersome and collide with your arms, while a club that is too small might lack the visual presence needed for a clean pattern. By matching the club’s width to your physical height and wingspan, you ensure that the equipment feels like an extension of your body, allowing for more natural movement and quicker skill progression.</p>
+                <p></p>
+                <div class="content">
+                    <h1 class="body-head">95mm (Standard):</h1>
+                    <p class="content">Recommended for most people (5'6” to 6'0"). It provides a great visual balance and is the most common choice.</p>
+                </div>
+                <div class="content">
+                    <h1 class="body-head">85mm (Small):</h1>
+                    <p class="content">Best for shorter individuals (under 5'7") or those with smaller frames, as it feels more scaled to your physique.</p>
+                </div>
+                <div class="content">
+                    <h1 class="body-head">105mm (Stage/Pro):</h1>
+                    <p class="content">Designed for tall jugglers (over 6') or performers who want a massive visual impact for a stage audience.</p>
+                </div>
+            </div>
+
+            <div class="body">
+                <h1 class="body-header">Section 2: The "Handle" Debate: Taped vs. Standard</h1>
+                <p class="opener">"The handle is your primary point of contact with the club, and the material you choose directly impacts your comfort and control. Beginners often struggle with 'sting'—the sharp pain felt when catching a fast-spinning club. Choosing the right handle finish can minimize this discomfort and help you practice for longer periods without fatigue. Whether you prefer the soft cushion of tape or the sleek precision of plastic, your grip style should reflect your current skill level and environment."</p>
+                <p></p>
+                <div class="content">
+                    <h1 class="body-head">Taped Handles (The Beginner Choice):</h1>
+                    <p class="content">These handles are wrapped in white vinyl tape.</p>
+                    <p class="content">Pros: Much softer on the hands, which reduces pain when you are first learning to catch.</p>
+                    <p class="content">Cons: Require maintenance; the tape may need replacing as it gets dirty or loses its grip.</p>
+                </div>
+            </div>
+        
+        <div class="footer"> <!--footer of the page-->
+            <p>© 2026 Jaden Meharry</p>
+            <button id="join-button">Join The Community</button>
+            <p class="footer-links">
+            <a href="Gear_Review.html" class="gear">
                 Gear Review
             </a>
             <a href="The_Practice_Den.html" class="practice">
                 The Practice Den
             </a>
+            </p>
         </div>
 
-        <!-- Container element -->
-        <div class="parallax"></div>
+        <!--firebase script-->
+        <script type="module"> 
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-analytics.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
 
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            const firebaseConfig = {
+                apiKey: "AIzaSyCFDFGYr003Ocix4ArJtO1HygJ8_JgVM3w",
+                authDomain: "club-juggling.firebaseapp.com",
+                projectId: "club-juggling",
+                storageBucket: "club-juggling.firebasestorage.app",
+                messagingSenderId: "605495578030",
+                appId: "1:605495578030:web:2c2ed9afd3dbd99e430c3f",
+                measurementId: "G-7NL84YEJXM"
+            };
 
-		<div class="body">
-			<div class="caption">
-			<span class="border"> 
-			scroll down
-			</span>
-			</div>
-			<h1>
-			test
-			</h1>
-		</div>
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+        </script>
     </body>
 
 </html>

@@ -126,6 +126,7 @@ body {
     background-color: rgba(30, 20, 41, 0.68);
     backdrop-filter: blur(6px);
     border-radius: 16px;
+    gap: 10px;
 }
 
 .parallax > .body:first-child {
@@ -138,10 +139,27 @@ body {
     text-align: center;
     color: #E9DDF7;
 }
+
+.body-head {
+    font-size: 150%;
+    margin: 0;
+    text-align: center;
+    color: #c7b4e1;
+}
 .opener {
     font-size: 18px;
     line-height: 1.5;
     color: #F8F4FC;
+}
+.content {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #F8F4FC;
+    margin: 0;
+}
+
+.body > div.content + div.content {
+    margin-top: 16px;
 }
 /* ===== FOOTER STYLES ===== */
 .footer {
