@@ -10,7 +10,9 @@ h1, h2, h3, h4, h5, h6 {
     font-family: sans-serif;
     font-weight: 700;
 }
-
+html, body {
+    overflow-x: hidden;
+}
 /* Navigation bar styling */
 .nav {
     border: 1px solid black;
@@ -120,7 +122,7 @@ body {
     padding: 50px 80px;
     text-align: center;
     max-width: 800px;
-    width: 100%;
+    width: calc(100% - 32px);
     margin: 80px auto;
     box-sizing: border-box;
     background-color: rgba(30, 20, 41, 0.68);
@@ -236,6 +238,33 @@ body {
 }
 
 
+
+
+.body.with-image {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 1100px;
+    gap: 32px;
+}
+
+.section-text {
+    flex: 1;
+}
+
+.image {
+    flex-shrink: 0;
+}
+
+.cascade-image {
+    width: 280px;
+    border-radius: 12px;
+}
+
+.body.with-image .image {
+    margin-top: 0;
+}
+
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
 
@@ -246,8 +275,21 @@ body {
     .parallax {
         padding: 110px 16px 70px;
     }
-}
 
+
+}
+@media (max-width:830px) {
+
+
+    .body.with-image {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .cascade-image {
+        display: none;
+    }
+}
 @media (max-width: 704px) {
     .nav-title {
         font-size: 22px;
