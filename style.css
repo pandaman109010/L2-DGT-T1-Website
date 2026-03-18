@@ -55,7 +55,7 @@ body {
 }
 
 /* Navigation links - consolidated stylesheet for .gear and .practice */
-.gear, .practice {
+.gear, .practice, .privacy {
     color: white;
     white-space: nowrap;
     text-decoration: none;
@@ -198,7 +198,8 @@ body {
 }
 
 .footer .gear,
-.footer .practice {
+.footer .practice,
+.footer .privacy {
     color: white;
     text-decoration: none;
     padding: 0;
@@ -210,12 +211,14 @@ body {
 }
 
 .footer .gear:hover::before,
-.footer .practice:hover::before {
+.footer .practice:hover::before,
+.footer .privacy:hover::before {
     display: none;
 }
 
 .footer .gear:hover,
-.footer .practice:hover {
+.footer .practice:hover,
+.footer .privacy:hover {
     text-decoration: underline;
 }
 
