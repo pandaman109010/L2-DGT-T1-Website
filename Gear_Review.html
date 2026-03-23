@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
     <head>
@@ -106,8 +105,6 @@
                     <p></p>
                     <p class="content"><strong>Pro Tip:</strong> If you're buying clubs as a gift, the "Safe Bet" is always a <strong>95mm decorated club</strong> with a long handle. It’s the universal standard!</p>
                 </div>
-                
-
             </div>
         <footer>
             <div class="footer"> <!--footer of the page-->
@@ -125,6 +122,26 @@
                 </a>
                 </p>
             </div>
+        <div class="join">
+            <h2>Join The Community</h2>
+            <p>Sign up to get training updates.</p>
+            <button type="button" id="close-btn" class="close-btn" aria-label="Close" onclick="this.parentElement.style.display='none'">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            <form id="join-form">
+                <label for="join-name">Name</label>
+                <input type="text" id="join-name" name="name" placeholder="Your name" required pattern="^\S+$">
+
+                <label for="join-email">Email</label>
+                <input type="email" id="join-email" name="email" placeholder="your@email.com" required pattern="^\S+$">
+
+                <label for="join-password">Password</label>
+                <input type="password" id="join-password" name="password" placeholder="Password" required minlength="6" pattern="^\S+$">
+
+                <p id="join-space-error" class="join-error" aria-live="polite"></p>
+                <button type="submit" class="join-btn">Join</button>
+            </form>
+        </div>
         </footer>
         <!--firebase script-->
         <script type="module"> 

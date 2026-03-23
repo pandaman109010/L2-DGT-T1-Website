@@ -43,13 +43,13 @@
         <div class="parallax">
         <div class="body"> <!--main body of the page-->
             <h1 class="body-header">Welcome to the juggler's Toolkit.</h1>
-            <p class="opener">If you just got your clubs. The Training Ground is here to help you improve. We have reviews of the gear to help you find the right type for your tricks. You can also check out our easy-to-follow tutorials to turn your practice into a show. The Training Ground is about helping you master club juggling with precise techniques and tips from me the owner of this website. We want to help you take your skills to the level whether you are a beginner or advanced. Explore our site to learn more about club juggling and how to improve your skills.</p>
+            <p class="opener">If you just got your clubs. The Training Ground is here to help you get better. We have reviews of the gear to help you choose the best one for your tricks. You can also look at our simple tutorials to turn your practice into a performance. The Training Ground is a place where you can learn how to juggle clubs with the help of my expert tips and tricks. No matter how good you are, we want to help you get better. Visit our website to learn more about club juggling and how to get better at it.</p>
         </div>
         </div>
 
             <div class="body">
                 <H1 class="body-header">Start with the Basics: The 3-Club Cascade</H1>
-                <p class="opener">Before you can master complex patterns, you must start with the foundation of all club juggling: the 3-Club Cascade. This is the first pattern you should learn, following the same three-step approach used for rings, scarves, or balls. Remember, in this journey, dropping is a sign of progress!</p>
+                <p class="opener">Before you can master complex patterns, you must start with the foundation of all club juggling: the 3-Club Cascade. This is the first pattern you should learn, following the same three-step approach used for rings or balls. Remember, in this journey, dropping is a sign of progress!</p>
                 <div class="content">
                     <h1 class="body-head">Step 1: The Single Flip</h1>
                     <p class="content">Begin by practicing a single club throw from side to side. Aim for an arc slightly above head height. Focus on throwing upwards rather than away from your body. The club should complete one full spin, allowing you to catch it cleanly by the handle end.</p>
@@ -66,7 +66,7 @@
 
             <div class="body"> <!--second body of the page-->
                 <h1 class="body-header">About me</h1>
-                <p class="opener">for 3 years i've devoted myself to learning and improving my juggling skills. and i would like to share my knowledge and experience with others. through this website, i hope to help others develop their juggling abilities with this website and enjoy the fun and challenge that juggling brings.</p>
+                <p class="opener">For 3 years I've devoted myself to learning and improving my juggling skills. and i would like to share my knowledge and experience with others. through this website, i hope to help others develop their juggling abilities with this website and enjoy the fun and challenge that juggling brings.</p>
             </div>
         <footer>
             <div class="footer"> <!--footer of the page-->
@@ -84,6 +84,26 @@
                 </a>
                 </p>
             </div>
+        <div class="join">
+            <h2>Join The Community</h2>
+            <p>Sign up to get training updates.</p>
+            <button type="button" id="close-btn" class="close-btn" aria-label="Close" onclick="this.parentElement.style.display='none'">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            <form id="join-form">
+                <label for="join-name">Name</label>
+                <input type="text" id="join-name" name="name" placeholder="Your name" required pattern="^\S+$">
+
+                <label for="join-email">Email</label>
+                <input type="email" id="join-email" name="email" placeholder="your@email.com" required pattern="^\S+$">
+
+                <label for="join-password">Password</label>
+                <input type="password" id="join-password" name="password" placeholder="Password" required minlength="6" pattern="^\S+$">
+
+                <p id="join-space-error" class="join-error" aria-live="polite"></p>
+                <button type="submit" class="join-btn">Join</button>
+            </form>
+        </div>
         </footer>
         <!--firebase script-->
         <script type="module"> 

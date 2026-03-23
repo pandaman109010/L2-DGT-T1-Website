@@ -80,8 +80,48 @@
 
             <div class="body"> <!--second body of the page-->
                 <h1 class="body-header">Common Pitfalls & Quick Fixes</h1>
-                <p class="opener">for 3 years i've devoted myself to learning and improving my juggling skills. and i would like to share my knowledge and experience with others. through this website, i hope to help others develop their juggling abilities with this website and enjoy the fun and challenge that juggling brings.</p>
+                <div class="content">
+                    <p class="body-head">Over spinning</p>
+                    <p class="content"><strong>The issue:</strong>The club spins too fast could and hit you in the face.</p>
+                    <p class="content"><strong>The fix:</strong>You are likely holding the club too high up the neck. Move your hand down toward the knob (the end of the handle) to get a slower, more controlled flip.</p>
+                    <p class="body-head">The "Forward March"</p>
+                    <p class="content"><strong>The issue:</strong>You find yourself walking across the room to catch the clubs.</p>
+                    <p class="content"><strong>The fix:</strong>Imagine a pane of glass in front of your face. You must throw the clubs parallel to that glass, not through it. Practice standing with your toes against a wall to force a vertical throw.</p>
+                    <p class="body-head">Chicken Wings (Elbows out)</p>
+                    <p class="content"><strong>The issue:</strong>Your elbows are flaring out, making your catches jerky.</p>
+                    <p class="content"><strong>The fix:</strong>Keep your elbows tucked in at your hips. Most of the power should come from a small "scooping" motion of your forearms and a flick of the wrist.</p>
+                </div>
             </div>
+
+            <div class="body">
+                <h1 class="body-header">Section 3: Milestone Checklist</h1>
+                <p class="opener">Don't rush to the next level. Use this checklist to ensure your fundamentals are 'Excellence' standard before moving on.</p>
+                <div class="content">
+                    <p class="content"><span style="font-size:larger"><strong>1. </strong></span> <strong> &nbsp; The 10-Throw Streak:</strong>10 perfect single flips with your non-dominant hand.</p>
+                    <p class="content"><span style="font-size:larger"><strong>2. </strong></span> <strong> &nbsp;The Quiet Catch:</strong>Catching the club by the handle without a loud 'slap' sound.</p>
+                    <p class="content"><span style="font-size:larger"><strong>3. </strong></span> <strong> &nbsp; The Statue:</strong>Juggling 3 clubs for 5 seconds without moving your feet.</p>
+                </div>
+            </div>
+        <div class="join">
+            <h2>Join The Community</h2>
+            <p>Sign up to get training updates.</p>
+            <button type="button" id="close-btn" class="close-btn" aria-label="Close" onclick="this.parentElement.style.display='none'">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            <form id="join-form">
+                <label for="join-name">Name</label>
+                <input type="text" id="join-name" name="name" placeholder="Your name" required pattern="^\S+$">
+
+                <label for="join-email">Email</label>
+                <input type="email" id="join-email" name="email" placeholder="your@email.com" required pattern="^\S+$">
+
+                <label for="join-password">Password</label>
+                <input type="password" id="join-password" name="password" placeholder="Password" required minlength="6" pattern="^\S+$">
+
+                <p id="join-space-error" class="join-error" aria-live="polite"></p>
+                <button type="submit" class="join-btn">Join</button>
+            </form>
+        </div>
         <footer>
             <div class="footer"> <!--footer of the page-->
                 <p>© 2026 Jaden Meharry</p>
