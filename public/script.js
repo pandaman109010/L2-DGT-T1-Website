@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Cache key UI elements once the page has loaded.
     const form = document.getElementById("join-form");
     const errorText = document.getElementById("join-space-error");
+    const testNotice = document.getElementById("join-test-notice");
     const showbutton = document.getElementById("join-button");
     const joinPanel = document.querySelector(".join");
     const closebutton = document.getElementById("close-btn");
@@ -55,7 +56,7 @@ const blockSpaces = (event) => {
         e.preventDefault();
         
         if (form.checkValidity()) {
-            alert("Success! You joined the community.");
+            testNotice.textContent = "Thank you for joining, nothing was saved. this is just a test";
             form.reset();
         } else {
             form.reportValidity(); // This triggers the "Please fill in this field" bubble
