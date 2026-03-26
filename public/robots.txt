@@ -1,0 +1,6 @@
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+
+# Tell bots where the sitemap is (use your full URL)
+Sitemap: https://club-juggling.web.app/sitemap.xml

@@ -15,9 +15,11 @@
     </head>
 
     <body>
-        <img src="images/2person_club.webp" alt="Two jugglers practicing with clubs" class="page-background"> <!--background image of the page-->
+        <!-- Full-page background image -->
+        <img src="images/2person_club.webp" alt="Two jugglers practicing with clubs" class="page-background">
         
-        <div class="nav"> <!--defines navigation bar at the top of the page-->
+        <!-- Top navigation bar -->
+        <div class="nav">
 
             <h1 class="nav-title"> <!--all the diffrent buttons in th nav menu-->
                 <a href="index.html" class="nav-title">
@@ -39,37 +41,39 @@
 
         </div>
 
-
+        <!-- Hero/introduction section -->
         <div class="parallax">
         <div class="body"> <!--main body of the page-->
             <h1 class="body-header">Welcome to the juggler's Toolkit.</h1>
-            <p class="opener">If you just got your clubs. The Training Ground is here to help you get better. We have reviews of the gear to help you choose the best one for your tricks. You can also look at our simple tutorials to turn your practice into a performance. The Training Ground is a place where you can learn how to juggle clubs with the help of my expert tips and tricks. No matter how good you are, we want to help you get better. Visit our website to learn more about club juggling and how to get better at it.</p>
+            <p class="opener">If you just got your new clubs or are thinking about buying some for a friend. Then the juggler’s toolkit is here to help you get started. We have reviews of the different types of gear to help you pick the best for you. We also have simple tutorials to turn your practice into a performance. The training ground is the best place to start, where you can learn to juggle clubs with the help of expert tips and tricks provided by me. No matter how good you are, I want to help you get better. Explore our website to learn more about this new hobby youve found yourself in and how to get better at it.</p>
         </div>
         </div>
 
+            <!-- Main tutorial content: 3-club cascade steps -->
             <div class="body">
                 <H1 class="body-header">Start with the Basics: The 3-Club Cascade</H1>
-                <p class="opener">Before you can master complex patterns, you must start with the foundation of all club juggling: the 3-Club Cascade. This is the first pattern you should learn, following the same three-step approach used for rings or balls. Remember, in this journey, dropping is a sign of progress!</p>
+                <p class="opener">Before you learn and master complex patterns, you need to start with the foundation of all of club juggling: the 3-Club Cascade. This is the first pattern you should learn when starting out. It follows the same patterns with rings and balls. Remember, this is a journey, so have fun with it.</p>
                 <div class="content">
                     <h1 class="body-head">Step 1: The Single Flip</h1>
-                    <p class="content">Begin by practicing a single club throw from side to side. Aim for an arc slightly above head height. Focus on throwing upwards rather than away from your body. The club should complete one full spin, allowing you to catch it cleanly by the handle end.</p>
+                    <p class="content">Begin by practising throwing a single club from each hand back and forth. aim for an arc slightly above head height. Focus on throwing up and across rather than forward or away from your body. The club should complete one exactly full spin, not too fast, not too slow. This allows you to catch the handle cleanly in the other hand.</p>
                 </div>
                 <div class="content">
                     <h1 class="body-head">Step 2: The Exchange</h1>
-                    <p class="content">Hold one club in each hand. Toss the first club as you did in Step 1. As it reaches its peak, toss the second club inside the path of the first one to the same height.</p>
+                    <p class="content">hold one club in each hand, toss the first club as you did in step 1, and when it reaches its peak, toss the second club with the same path, don't worry, they shouldn't hit each other, and try not to rush it.</p>
                 </div>
                 <div class="content">
                     <h1 class="body-head">Step 3: The Full Cascade</h1>
-                    <p class="content">Hold two clubs in your dominant hand and one in your other hand. Launch the first club from the hand holding two. When it peaks, toss the club from the opposite hand. As that one peaks, throw the third club, and continue the rhythm. Experiment with your grip to find a comfortable way to hold two clubs at once.</p>
+                    <p class="content">hold two clubs in your dominant hand. (There are 2 different grips called the normal grip and the Circus Grip. Google what they look like and try them out; they should fit comfortably. I personally prefer the Circus Grip, but pick whatever feels right for you, then launch the first club from the hand holding two. Just before it peaks, throw the second club in the opposite hand. You will need to catch the first club in that hand, and when the second club peaks, chuck the 3rd club.<strong> Have a look at the practice den for proper tutorials </strong></p>
                 </div>
             </div>
-
-            <div class="body"> <!--second body of the page-->
+            <!-- About section -->
+            <div class="body">
                 <h1 class="body-header">About me</h1>
                 <p class="opener">For 3 years I've devoted myself to learning and improving my juggling skills. and i would like to share my knowledge and experience with others. through this website, i hope to help others develop their juggling abilities with this website and enjoy the fun and challenge that juggling brings.</p>
             </div>
+        <!-- Footer with links and join button -->
         <footer>
-            <div class="footer"> <!--footer of the page-->
+            <div class="footer">
                 <p>© 2026 Jaden Meharry</p>
                 <button id="join-button">Join The Community</button>
                 <p class="footer-links">
@@ -84,12 +88,15 @@
                 </a>
                 </p>
             </div>
+        <!-- Join community modal -->
         <div class="join">
             <h2>Join The Community</h2>
             <p>Sign up to get training updates.</p>
+            <!-- Inline close handler hides this modal container -->
             <button type="button" id="close-btn" class="close-btn" aria-label="Close" onclick="this.parentElement.style.display='none'">
             <span aria-hidden="true">&times;</span>
             </button>
+            <!-- Signup form with no-space and required field validation -->
             <form id="join-form">
                 <label for="join-name">Name</label>
                 <input type="text" id="join-name" name="name" placeholder="Your name" required pattern="^\S+$">
@@ -105,7 +112,7 @@
             </form>
         </div>
         </footer>
-        <!--firebase script-->
+        <!-- Firebase initialization and analytics -->
         <script type="module"> 
             // Import the functions you need from the SDKs you need
             import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";

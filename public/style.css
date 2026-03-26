@@ -1,19 +1,29 @@
-/* ===== NAVIGATION STYLES ===== */
+/* =====================================================
+   JUGGLER'S TOOLKIT - STYLESHEET
+   Main styles for navigation, content sections, modals,
+   and responsive design across all pages
+   ===================================================== */
 
+/* ===== GLOBAL STYLES ===== */
 
-/* Sets the font*/
+/* Sets the font for all elements */
 * {
     font-family: sans-serif;
 }
 
+/* Bold all heading elements */
 h1, h2, h3, h4, h5, h6 {
     font-family: sans-serif;
     font-weight: 700;
 }
+
+/* Hide horizontal scrollbar */
 html, body {
     overflow-x: hidden;
 }
-/* Navigation bar styling */
+/* ===== NAVIGATION BAR ===== */
+
+/* Navigation bar styling - fixed at top with blur effect */
 .nav {
     border: 1px solid black;
     display: flex;
@@ -37,6 +47,7 @@ body {
     font-family: sans-serif;
 }
 
+/* Fixed background image */
 .page-background {
     position: fixed;
     top: 0;
@@ -47,14 +58,14 @@ body {
     z-index: -1;
 }
 
-/* Navigation title styling */
+/* Navigation title/logo styling */
 .nav-title {
     margin: 0;
     color: white;
     text-decoration: none;
 }
 
-/* Navigation links - consolidated stylesheet for .gear and .practice */
+/* Navigation links - Gear, Practice, and Privacy pages */
 .gear, .practice, .privacy {
     color: white;
     white-space: nowrap;
@@ -63,6 +74,8 @@ body {
     position: relative;
     font-size: large;
 }
+
+/* Home icon for mobile version (hidden on desktop) */
 .small-home {
     display: none;
 }
@@ -74,7 +87,8 @@ body {
     object-fit: contain;
 }
 
-/* underline effect for navigation links */
+/* Underline animation effect for navigation links on hover */
+/* Uses ::before pseudo-element to create animated underlines */
 .gear:hover::before, .practice:hover::before {
     content: "";
     position: absolute;
@@ -82,19 +96,23 @@ body {
     background-color: white;
     bottom: 9.5px;
 }
+
 .gear:hover::before {
     width: 75%;
 }
+
 .practice:hover::before {
     width: 80%;
 }
 
-/* Push gear link to the right */
+/* Push gear link to the right side of navbar */
 .gear {
     margin-left: auto;
 }
 
-/* ===== PARALLAX BACKGROUND EFFECT ===== */
+/* ===== PARALLAX SECTIONS ===== */
+
+/* Full-height section with centered content */
 .parallax {
     min-height: 100vh;
     margin: 0;
@@ -106,14 +124,18 @@ body {
     box-sizing: border-box;
 }
 
-/* Down arrow styling */
+/* Down arrow icon positioned at bottom of section */
 .down-arrow {
     position: absolute;
     left: 50%;
     bottom: -70px;
     transform: translateX(-50%);
 }
+
 /* ===== BODY & CONTENT STYLES ===== */
+
+/* Main content container with semi-transparent background and glass effect */
+/* Uses backdrop-filter for frosted glass appearance and rgba for transparency */
 .body {
     border: 1px solid rgba(233, 221, 247, 0.35);
     display: flex;
@@ -131,10 +153,12 @@ body {
     gap: 10px;
 }
 
+/* Shift first body section slightly upward */
 .parallax > .body:first-child {
     transform: translateY(-60px);
 }
 
+/* Main heading inside body */
 .body-header {
     width: 100%;
     margin: 0;
@@ -142,17 +166,22 @@ body {
     color: #E9DDF7;
 }
 
+/* Subheading styling */
 .body-head {
     font-size: 150%;
     margin: 0;
     text-align: center;
     color: #c7b4e1;
 }
+
+/* Opening paragraph text */
 .opener {
     font-size: 18px;
     line-height: 1.5;
     color: #F8F4FC;
 }
+
+/* General paragraph content */
 .content {
     font-size: 18px;
     line-height: 1.5;
@@ -160,10 +189,16 @@ body {
     margin: 0;
 }
 
+/* Add spacing between consecutive content paragraphs */
+/* Prevents content from running together visually */
 .body > div.content + div.content {
     margin-top: 16px;
 }
 
+/* ===== VIDEO CONTAINER ===== */
+
+/* Responsive iframe container with 16:9 aspect ratio */
+/* Maintains video proportions across all screen sizes using aspect-ratio */
 .video-container {
     position: relative;
     width: min(100%, 900px);
@@ -173,6 +208,7 @@ body {
     border-radius: 12px;
 }
 
+/* Full-width iframe inside container */
 .video-container iframe {
     position: absolute;
     inset: 0;
@@ -182,7 +218,16 @@ body {
     display: block;
 }
 
+/* ===== PRIVACY POLICY PAGE ===== */
+
+/* Extra padding for privacy policy content */
+.privacy-policy {
+    padding: 40px;
+}
+
 /* ===== FOOTER STYLES ===== */
+
+/* Footer container with 3-column grid layout */
 .footer {
     padding: 24px;
     align-items: center;
@@ -194,28 +239,34 @@ body {
     color: #F8F4FC;
 }
 
+/* Align first paragraph to start (left) */
 .footer p:first-child {
     justify-self: start;
 }
 
+/* Center middle paragraph */
 .footer p:nth-child(2) {
     justify-self: center;
 }
 
+/* Align last paragraph to end (right) */
 .footer p:last-child {
     justify-self: end;
 }
 
+/* Remove default margins from footer paragraphs */
 .footer p {
     margin: 0;
 }
 
+/* Footer navigation links container */
 .footer-links {
     display: flex;
     align-items: center;
     gap: 14px;
 }
 
+/* Footer navigation links styling */
 .footer .gear,
 .footer .practice,
 .footer .privacy {
@@ -225,24 +276,30 @@ body {
     font-size: large;
 }
 
+/* Override gear margin for footer */
 .footer .gear {
     margin-left: 0;
 }
 
+/* Remove hover underline from footer links */
 .footer .gear:hover::before,
 .footer .practice:hover::before,
 .footer .privacy:hover::before {
     display: none;
 }
 
+/* Simple underline on hover for footer links */
 .footer .gear:hover,
 .footer .practice:hover,
 .footer .privacy:hover {
     text-decoration: underline;
 }
 
+/* ===== BUTTON STYLES ===== */
+
+/* Primary join button styling */
 #join-button {
-    background-color: rgba(174, 0, 197, 0.308); /* pink background */
+    background-color: rgba(174, 0, 197, 0.308);
     color: white;
     padding: 2px 10px;
     text-align: center;
@@ -255,13 +312,16 @@ body {
     border-radius: 8px;
 }
 
+/* Button hover effect - brighten color */
 #join-button:hover {
     background-color: rgba(225, 0, 255, 0.308);
 }
 
 
+/* ===== IMAGE STYLES ===== */
 
-
+/* Body layout with image - side by side on desktop */
+/* Switches to flex-direction: row for side-by-side layout */
 .body.with-image {
     flex-direction: row;
     align-items: center;
@@ -270,26 +330,33 @@ body {
     gap: 32px;
 }
 
+/* Text section takes up available space */
 .section-text {
     flex: 1;
 }
 
+/* Image container - prevents shrinking */
 .image {
     flex-shrink: 0;
 }
 
+/* Main image styling with rounded corners */
 .cascade-image {
     width: 280px;
     border-radius: 12px;
 }
 
+/* Remove default top margin from images in image layout */
+/* Prevents unwanted spacing on image containers */
 .body.with-image .image {
     margin-top: 0;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 768px) {
+/* Breakpoints: 768px (tablet), 830px (medium), 704px (nav), 607px (mobile) */
 
+/* Tablet and below (768px) - adjust padding for body sections */
+@media (max-width: 768px) {
     .body {
         padding: 32px 20px;
     }
@@ -297,31 +364,36 @@ body {
     .parallax {
         padding: 110px 16px 70px;
     }
-
-
 }
-@media (max-width:830px) {
 
-
+/* Medium screens (830px) - stack images and text vertically */
+@media (max-width: 830px) {
     .body.with-image {
         flex-direction: column;
         gap: 16px;
     }
 
+    /* Hide image on smaller screens */
     .cascade-image {
         display: none;
     }
 }
+
+/* Small screens (704px) - reduce nav title size */
 @media (max-width: 704px) {
     .nav-title {
         font-size: 22px;
     }
 }
 
+/* Mobile (607px and below) - hide title, show icon & adjust layout */
 @media (max-width: 607px) {
+    /* Hide full navigation title on mobile */
     .nav-title {
         display: none;
     }
+
+    /* Show mobile home icon instead of title */
     .small-home {
         display: block;
         color: white;
@@ -331,6 +403,8 @@ body {
         position: relative;
         font-size: large;
     }
+
+    /* Adjust navigation layout for mobile */
     .nav {
         flex-direction: row;
         gap: 10px;
@@ -338,44 +412,54 @@ body {
         align-items: center;
         justify-content: center;
     }
+
+    /* Remove auto margin from gear link on mobile */
     .gear {
         margin-left: 0;
     }
 
+    /* Center footer links on mobile */
     .footer-links {
         justify-content: center;
         flex-wrap: wrap;
     }
+
+    /* Reduce footer link font size on mobile */
+    .footer .gear,
+    .footer .practice,
+    .footer .privacy {
+        font-size: medium;
+    }
 }
+/* ===== JOIN MODAL ANIMATIONS ===== */
+/* Handles rise-up animation when modal opens and sink-down when closing */
 
-
-/* 1. Updated Keyframes to include the centering math */
+/* Animation: Content rises up with fade in effect */
 @keyframes riseUp {
     from {
         opacity: 0;
-        /* Keep the -50% centering, but start 50px lower (+ 50px) */
-        transform: translate(-50%, calc(-50% + 50px)); 
+        /* Start 50px lower than final position */
+        transform: translate(-50%, calc(-50% + 50px));
     }
     to {
         opacity: 1;
-        /* End at the perfect center */
-        transform: translate(-50%, -50%); 
+        /* End at perfect center */
+        transform: translate(-50%, -50%);
     }
 }
 
-/* 2. Update the trigger class */
+/* Trigger rising animation when modal shows */
 .show-animation {
-    /* Use flex or block depending on your layout, but match your .join */
     display: block !important;
-    pointer-events: auto !important; /* Makes it clickable again */
+    pointer-events: auto !important;
     animation: riseUp 0.5s ease-out forwards;
 }
 
-/* 1. Define the Sink Down movement */
+/* Animation: Content sinks down with fade out effect */
 @keyframes sinkDown {
     from {
         opacity: 1;
-        transform: translate(-50%, -50%); /* Start at the center */
+        transform: translate(-50%, -50%); /* Start at center */
     }
     to {
         opacity: 0;
@@ -383,13 +467,16 @@ body {
     }
 }
 
-/* 2. The class that triggers the closing animation */
+/* Trigger closing animation */
 .hide-animation {
     animation: sinkDown 0.4s ease-in forwards;
     pointer-events: none !important;
 }
 
+/* ===== JOIN MODAL CONTAINER ===== */
 
+/* Central modal dialog with glass effect */
+/* Fixed positioning centers modal with transform, high z-index keeps it on top */
 .join {
     position: fixed;
     top: 50%;
@@ -412,36 +499,41 @@ body {
     pointer-events: none;
 }
 
-/* Target only the close button */
+/* ===== CLOSE BUTTON ===== */
+
+/* Close button positioned in top right corner */
+/* Uses absolute positioning relative to modal container */
 .close-btn {
     position: absolute;
     top: 29px;
     right: 59px;
-    
-    /* Reset the width/margin from your previous .join button style */
-    width: 32px !important; 
+    width: 32px !important;
     height: 32px;
     margin: 0 !important;
     padding: 0 !important;
-    
-    background: rgba(125, 123, 126, 0.078); /* Remove the heavy box */
+    background: rgba(125, 123, 126, 0.078);
     border: none;
-    color: rgba(161, 72, 249, 0.703); /* Make it faint */
+    color: rgba(161, 72, 249, 0.703);
     font-size: 24px;
     transition: all 0.2s ease;
 }
 
+/* Close button hover effect */
+/* Rotates button when hovered for visual feedback */
 .close-btn:hover {
     color: #fff;
-    transform: rotate(90deg); /* Cool little interaction */
+    transform: rotate(90deg);
     background: transparent;
 }
 
 .close-btn:hover {
-    background: rgba(255, 159, 178, 0.3); /* Slight red tint on hover */
+    background: rgba(255, 159, 178, 0.3);
     color: #fff;
 }
 
+/* ===== JOIN MODAL TEXT ===== */
+
+/* Modal headings styling */
 .join h1,
 .join h2,
 .join h3 {
@@ -450,14 +542,18 @@ body {
     text-align: center;
 }
 
+/* Modal paragraphs and labels */
 .join p,
 .join label {
     font-size: 18px;
     line-height: 1.5;
     text-align: center;
-
 }
 
+/* ===== JOIN MODAL FORM ELEMENTS ===== */
+
+/* Input and button base styling */
+/* Applies common layout and sizing for all form inputs and buttons */
 .join input,
 .join button {
     width: 100%;
@@ -466,40 +562,48 @@ body {
     border-radius: 10px;
     box-sizing: border-box;
     font-size: 16px;
-    
 }
 
+/* Input field styling */
 .join input {
     border: 1px solid rgba(233, 221, 247, 0.35);
     background-color: rgba(233, 221, 247, 0.08);
     color: #F8F4FC;
 }
 
+/* Input placeholder text color */
 .join input::placeholder {
     color: rgba(248, 244, 252, 0.7);
 }
 
+/* Join/Submit button styling with gradient */
+/* Gradient background with purple tones and shadow for depth */
 .join .join-btn {
     border: none;
     cursor: pointer;
     color: #F8F4FC;
-    background-color: rgba(174, 0, 197, 0.35);
-    margin-top: 30px; /* Separate it from the password box */
     background: linear-gradient(135deg, #ae00c5 0%, #750086 100%);
+    margin-top: 30px;
     font-weight: 600;
     letter-spacing: 0.5px;
     box-shadow: 0 4px 15px rgba(174, 0, 197, 0.3);
     transition: transform 0.1s active;
 }
+
+/* Join button press effect */
+/* Scales down slightly and darkens on click for tactile feedback */
 .join-btn:active {
-    transform: scale(0.95); /* Shrinks slightly when clicked */
+    transform: scale(0.95);
     filter: brightness(0.9);
 }
 
+/* Join button hover effect */
 .join button:hover {
     background-color: rgba(225, 0, 255, 0.4);
 }
 
+/* Error message styling */
+/* Displays validation errors in pink with small font */
 .join-error {
     min-height: 20px;
     margin: 8px 0 0;
@@ -508,14 +612,33 @@ body {
     font-weight: 700;
 }
 
+/* ===== JOIN MODAL MOBILE RESPONSIVE ===== */
+
 @media (max-width: 607px) {
+    /* Adjust modal size for mobile */
     .join {
         width: calc(100% - 20px);
         padding: 22px 16px;
     }
 
+    /* Mobile heading adjustment */
+    .join h2 {
+        text-align: center;
+        width: calc(100% - 40px);
+        margin: 0 40px 10px 0;
+    }
+
+    /* Reduce text sizing on mobile */
     .join p,
     .join label {
         font-size: 16px;
+    }
+
+    /* Smaller close button on mobile */
+    .close-btn {
+        top: 22px;
+        right: 22px;
+        width: 28px !important;
+        height: 28px;
     }
 }

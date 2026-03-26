@@ -1,10 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Cache key UI elements once the page has loaded.
     const form = document.getElementById("join-form");
     const errorText = document.getElementById("join-space-error");
     const showbutton = document.getElementById("join-button");
     const joinPanel = document.querySelector(".join");
     const closebutton = document.getElementById("close-btn");
 
+// Open the join modal and play its entrance animation.
 showbutton.addEventListener("click", () => {
     joinPanel.style.display = "block";
     joinPanel.classList.remove("hide-animation");
@@ -13,13 +15,14 @@ showbutton.addEventListener("click", () => {
 });
 
 
+// Close the join modal by hiding the panel.
 closebutton.addEventListener("click", () => {
     // Hide the join box
     joinPanel.classList.add("hide-animation");
     joinPanel.style.display = "none";
 });
 
-    // 1. Function to handle the "No Space" rule
+// Reusable validator: blocks spaces and shows a native browser validation bubble.
 const blockSpaces = (event) => {
     const input = event.target;
 
@@ -37,17 +40,17 @@ const blockSpaces = (event) => {
     }
 };
 
-    // 2. Attach the rule to your three inputs manually (no loops needed yet)
+    // Apply the no-space rule to each field that must not contain spaces.
     document.getElementById("join-name").addEventListener("keydown", blockSpaces);
     document.getElementById("join-email").addEventListener("keydown", blockSpaces);
     document.getElementById("join-password").addEventListener("keydown", blockSpaces);
 
-    // 3. Clear the error when they type anything valid
+    // Clear the error text as soon as the user edits the form.
     form.addEventListener("input", () => {
         errorText.textContent = ""; 
     });
 
-    // 4. Handle the Final Join
+    // Final submit flow: stop page reload, validate, then show success/reset.
     form.addEventListener("submit", (e) => {
         e.preventDefault();
         
